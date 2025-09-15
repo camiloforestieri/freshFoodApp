@@ -1,0 +1,7 @@
+{
+  "name": "FreshFoodApss",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
