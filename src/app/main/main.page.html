@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Main</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="welcome-content" style="--background: #f5f6fa;">
+
+  
+
+  <div class="welcome-card">
+    <h2>¡Hola, Usuario!</h2>
+    <p class="success">Has iniciado sesión correctamente 🎉</p>
+    <p class="subtitle">Explora todas las funciones de la app y disfruta de la experiencia.</p>
+
+    
+
+    <ion-button expand="block" fill="outline" color="primary" routerLink="/perfil">
+      Ver Perfil
+    </ion-button>
+
+    <ion-button expand="block" color="danger" routerLink="/login">
+      Cerrar Sesión
+    </ion-button>
+  </div>
+
+</ion-content>
+

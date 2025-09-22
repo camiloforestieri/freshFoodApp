@@ -1,0 +1,93 @@
+ion-content {
+  --background: #f5f7f8 !important; // fondo claro siempre
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+
+  form {
+    width: 100%;
+    max-width: 400px;
+    background: #fff !important; // caja blanca
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    ion-item {
+      --background: #fff !important; // inputs con fondo blanco
+      --color: #000 !important;      // texto negro
+      --highlight-color-focused: #4caf50; // verde al enfocar
+      --highlight-color-valid: #4caf50;
+      --highlight-color-invalid: #e53935;
+      border-bottom: 1px solid #c8e6c9;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    ion-label {
+      color: #333 !important;
+      font-size: 15px;
+    }
+
+    ion-input {
+      color: #000 !important;
+      font-size: 15px;
+    }
+
+    ion-button {
+      margin-top: 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      --background: #448aff;
+      --background-hover: #2979ff;
+      --background-activated: #1565c0;
+      --background-focused: #1565c0;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .cliente-guardado {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    background: #fff !important; // caja blanca
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+    h2 {
+      color: #333 !important;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #444 !important;
+    }
+
+    strong {
+      color: #000 !important;
+    }
+
+    .foto-cliente {
+      margin-top: 10px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  .imagen-container {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

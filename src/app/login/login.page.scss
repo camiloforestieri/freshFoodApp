@@ -1,0 +1,86 @@
+// login.page.scss
+
+// ----------------------
+// Paleta basada en el logo
+// ----------------------
+$brand-primary: #7cbf8a;   // verde principal
+$brand-secondary: #4e8c61; // verde oscuro
+$brand-accent: #a8d5b9;    // verde claro/acento
+$brand-light: #f5f7f5;     // gris muy claro de fondo
+$brand-dark: #2f3e34;      // tono oscuro para texto
+
+// ----------------------
+// Estilos de la pantalla de login
+// ----------------------
+ion-content {
+  --background: #{$brand-light};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+  padding: 28px 22px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+  ion-item {
+    --background: transparent;
+    --highlight-color-focused: #{$brand-primary};
+    --border-color: #{$brand-accent};
+    margin-bottom: 14px;
+    border-radius: 10px;
+
+    ion-label {
+      color: $brand-dark;
+      font-weight: 500;
+    }
+
+    ion-input {
+      color: $brand-dark;
+    }
+  }
+
+  ion-button {
+    border-radius: 14px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+
+    &.ion-margin-top {
+      margin-top: 20px;
+    }
+
+    &[color="primary"] {
+      --background: #{$brand-primary};
+      --background-hover: #{$brand-secondary};
+      --color: white;
+      box-shadow: 0 6px 12px rgba(124,191,138,0.3);
+    }
+
+    &[fill="clear"] {
+      font-size: 0.9rem;
+      color: $brand-secondary;
+      text-transform: none;
+    }
+
+    &[fill="outline"] {
+      --border-color: #{$brand-secondary};
+      --color: $brand-secondary;
+      font-weight: 600;
+    }
+  }
+}
+
+// ----------------------
+// Responsive
+// ----------------------
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+}

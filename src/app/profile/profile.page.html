@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Main</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <!-- Foto mostrada arriba -->
+  <div *ngIf="imagenPreview" class="imagen-container">
+    <img [src]="imagenPreview" alt="Foto del cliente" class="foto-cliente">
+  </div>
+
+  <form [formGroup]="profileForm" (ngSubmit)="guardarProfile()">
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input formControlName="correo" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input formControlName="telefono" type="tel"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Dirección</ion-label>
+      <ion-input formControlName="direccion" type="text"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" color="primary" (click)="tomarFoto()" type="button">
+      Tomar Foto
+    </ion-button>
+
+    <ion-button expand="full" color="secondary" (click)="seleccionarFoto()" type="button">
+      Seleccionar de Galería
+    </ion-button>
+
+    <ion-button expand="full" type="submit" [disabled]="!profileForm.valid">
+      Guardar Perfil
+    </ion-button>
+
+  </form>
+
+  <!-- Visualizar datos guardados -->
+  <div *ngIf="clienteGuardado" class="cliente-guardado">
+    <h2>Datos Guardados:</h2>
+    <p><strong>Nombre:</strong> {{ clienteGuardado.nombre }}</p>
+    <p><strong>Correo:</strong> {{ clienteGuardado.correo }}</p>
+    <p><strong>Teléfono:</strong> {{ clienteGuardado.telefono }}</p>
+    <p><strong>Dirección:</strong> {{ clienteGuardado.direccion }}</p>
+    <img *ngIf="clienteGuardado.foto" [src]="clienteGuardado.foto" alt="Foto guardada" class="foto-cliente">
+  </div>
+
+</ion-content>
+
