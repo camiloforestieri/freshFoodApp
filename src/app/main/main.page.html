@@ -3,21 +3,21 @@
     <ion-buttons slot="start">
       <ion-menu-button menu="m1"></ion-menu-button>
     </ion-buttons>
-    <ion-title>Main</ion-title>
+    <ion-title>Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
-
-<ion-content [fullscreen]="true" class="welcome-content" style="--background: #f5f6fa;">
+<ion-content [fullscreen]="true" class="welcome-content">
 
   
+  <ion-img src="assets/img/DULCESMEX.jpg" class="welcome-image"></ion-img>
 
   <div class="welcome-card">
-    <h2>¡Hola, Usuario!</h2>
+    <h2>¡Hola! Para nosotros es un gusto tenerte aquí</h2>
     <p class="success">Has iniciado sesión correctamente 🎉</p>
-    <p class="subtitle">Explora todas las funciones de la app y disfruta de la experiencia.</p>
-
-    
+    <p class="subtitle">
+      Explora todas las funciones de la app y disfruta de la experiencia.
+    </p>
 
     <ion-button expand="block" fill="outline" color="primary" routerLink="/perfil">
       Ver Perfil
@@ -28,4 +28,3 @@
     </ion-button>
   </div>
 </ion-content>
-

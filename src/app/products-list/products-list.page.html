@@ -3,31 +3,25 @@
     <ion-buttons slot="start">
       <ion-menu-button menu="m1"></ion-menu-button>
     </ion-buttons>
-    <ion-title>ProductList</ion-title>
+    <ion-title>Productos</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">ProductList</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
+<ion-content [fullscreen]="true">
   <ion-list>
     <ion-list-header>
       <ion-label>Productos en Oferta</ion-label>
     </ion-list-header>
-    @for (product of products; track product._id) {
-    <ion-item>
+
+    <ion-item *ngFor="let product of products" (click)="openProduct(product._id)">
       <ion-thumbnail slot="start">
         <img [src]="product.image" [alt]="product.name">
       </ion-thumbnail>
       <ion-label>
         <h2>{{product.name}}</h2>
         <p>{{product.description}}</p>
+        <strong>\${{product.price}}</strong>
       </ion-label>
     </ion-item>
-    }
   </ion-list>
-
 </ion-content>

@@ -3,13 +3,13 @@
     <ion-buttons slot="start">
       <ion-menu-button menu="m1"></ion-menu-button>
     </ion-buttons>
-    <ion-title>Main</ion-title>
+    <ion-title>Perfil del Usuario</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
 
-  <!-- Foto mostrada arriba -->
+  
   <div *ngIf="imagenPreview" class="imagen-container">
     <img [src]="imagenPreview" alt="Foto del cliente" class="foto-cliente">
   </div>
@@ -50,7 +50,7 @@
 
   </form>
 
-  <!-- Visualizar datos guardados -->
+  
   <div *ngIf="clienteGuardado" class="cliente-guardado">
     <h2>Datos Guardados:</h2>
     <p><strong>Nombre:</strong> {{ clienteGuardado.nombre }}</p>

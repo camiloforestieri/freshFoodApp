@@ -1,0 +1,74 @@
+/* carrito.page.scss */
+
+ion-header {
+  --background: #3b82f6; /* Azul */
+  color: #fff;
+}
+
+ion-toolbar {
+  --background: #3b82f6;
+  --color: #fff;
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+ion-content {
+  --background: #f5f6f9;
+  padding: 16px;
+}
+
+/* Estilo para cada producto en el carrito */
+ion-item {
+  border-radius: 10px;
+  margin: 8px 0;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  --background: #fff;
+}
+
+ion-thumbnail img {
+  border-radius: 8px;
+}
+
+/* Nombre y precio del producto */
+ion-label h2 {
+  font-weight: 600;
+  color: #333;
+}
+
+ion-label p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Botones */
+ion-button {
+  --border-radius: 10px;
+  --box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  font-weight: bold;
+}
+
+/* Botón "Vaciar Carrito" en rojo */
+ion-button[color="danger"] {
+  --background: #ef4444;
+  --background-activated: #dc2626;
+  --background-hover: #f87171;
+  color: #fff;
+}
+
+
+
+/* Forzar fondo de la lista */
+ion-list {
+  --background: transparent !important;
+  background: transparent !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegurar que los items tengan fondo blanco */
+ion-item {
+  --background: #fff !important;
+}

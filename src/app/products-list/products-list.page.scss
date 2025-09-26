@@ -1,1 +1,72 @@
 
+/* productos.page.scss */
+
+ion-header {
+  --background: #3b82f6; /* Azul */
+  color: #fff;
+}
+
+ion-toolbar {
+  --background: #3b82f6;
+  --color: #fff;
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+ion-content {
+  --background: #f5f6f9;
+  padding: 16px;
+}
+
+/* Encabezado de la lista */
+ion-list-header {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin: 8px 0;
+  background: transparent !important;
+}
+
+/* Fondo transparente en la lista */
+ion-list {
+  --background: transparent !important;
+  background: transparent !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo de cada producto */
+ion-item {
+  border-radius: 10px;
+  margin: 8px 0;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  --background: #fff !important;
+}
+
+ion-thumbnail img {
+  border-radius: 8px;
+}
+
+/* Nombre del producto */
+ion-label h2 {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Descripción */
+ion-label p {
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0;
+}
+
+/* Precio */
+ion-label strong {
+  display: block;
+  margin-top: 4px;
+  color: #3b82f6;
+  font-size: 16px;
+}

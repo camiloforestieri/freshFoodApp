@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contactanos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div class="login-container">
+    <h2 class="title">Envíanos un mensaje</h2>
+
+    <form>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Correo electrónico</ion-label>
+        <ion-input type="email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Asunto</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Mensaje</ion-label>
+        <ion-textarea rows="5" required></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="block" color="primary" class="ion-margin-top">
+        Enviar
+      </ion-button>
+    </form>
+
+    <div class="info-contacto">
+      <h3>Información de contacto</h3>
+      <p>📍 Calle Principal #123, Ciudad de México</p>
+      <p>📞 +52 55 1234 5678</p>
+      <p>📧 contacto@mitiendaonline.com</p>
+    </div>
+  </div>
+</ion-content>

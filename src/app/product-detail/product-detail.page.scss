@@ -1,0 +1,68 @@
+/* detalle-producto.page.scss */
+
+ion-header {
+  --background: #3b82f6; /* Azul */
+  color: #fff;
+}
+
+ion-toolbar {
+  --background: #3b82f6;
+  --color: #fff;
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+ion-content {
+  --background: #f5f6f9;
+  padding: 16px;
+}
+
+/* Tarjeta del producto */
+ion-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  margin: 16px 0;
+}
+
+ion-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+ion-card-header {
+  background: #fff;
+  padding: 12px;
+}
+
+ion-card-title {
+  font-weight: 600;
+  font-size: 20px;
+  color: #333;
+}
+
+ion-card-subtitle {
+  font-size: 16px;
+  color: #3b82f6;
+  margin-top: 4px;
+}
+
+ion-card-content {
+  background: #fff;
+  padding: 12px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Botón principal */
+ion-button {
+  --border-radius: 10px;
+  --box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  font-weight: bold;
+  margin-top: 16px;
+}

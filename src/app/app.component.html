@@ -5,31 +5,42 @@
         <ion-title>Fresh Food & Herbs</ion-title>
       </ion-toolbar>
     </ion-header>
+
     <ion-content>
       <ion-list>
-
         <ion-menu-toggle>
           <ion-item button [routerLink]="['/main']">
-            <ion-label>Home</ion-label>
+            <ion-label>Inicio</ion-label>
           </ion-item>
         </ion-menu-toggle>
-
 
         <ion-menu-toggle>
           <ion-item button [routerLink]="['/profile']">
-            <ion-label>Profile</ion-label>
+            <ion-label>Perfil del Usuario</ion-label>
           </ion-item>
         </ion-menu-toggle>
 
-
         <ion-menu-toggle>
           <ion-item button [routerLink]="['/products-list']">
-            <ion-label>Product List</ion-label>
+            <ion-label>Nuestros Productos</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item button [routerLink]="['/cart']">
+            <ion-label>Carrito de Compras</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item button [routerLink]="['/contact']">
+            <ion-label>Contáctanos</ion-label>
           </ion-item>
         </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>
 
+  <!-- Importante: contentId debe coincidir con el del menú -->
   <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

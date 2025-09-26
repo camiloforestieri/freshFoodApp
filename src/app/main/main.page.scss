@@ -1,62 +1,76 @@
-/* Fondo igual al login / registro */
-ion-content.welcome-content {
-  --background: #f5f6f7;
-  padding: 16px;
+ion-header {
+  --background: #3b82f6; /* Azul */
+  color: #fff;
+}
+
+ion-toolbar {
+  --background: #3b82f6;
+  --color: #fff;
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+ion-content {
+  --background: #f5f6fa !important;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  padding: 16px;
 }
 
-/* Tarjeta blanca central */
+/* Tarjeta de bienvenida */
 .welcome-card {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 14px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
   padding: 24px;
+  text-align: center;
   width: 100%;
   max-width: 360px;
-  margin-top: 40px;
-  text-align: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  margin: auto;
 }
 
-/* Título principal */
 .welcome-card h2 {
-  margin-bottom: 12px;
   font-size: 22px;
-  font-weight: bold;
-  color: #111;
-}
-
-/* Texto general */
-.welcome-card p {
-  font-size: 14px;
-  color: #000000;
-  margin-bottom: 12px;
-}
-
-/* Texto de éxito */
-.welcome-card .success {
-  color: #000000 ;
   font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
 }
 
-/* Texto secundario */
+.welcome-card .success {
+  color: #16a34a; /* Verde éxito */
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
 .welcome-card .subtitle {
-  color: #000000;
+  color: #555;
   font-size: 14px;
   margin-bottom: 20px;
 }
 
 /* Botones */
 ion-button {
-  --border-radius: 8px;
-  margin-top: 12px;
+  --border-radius: 10px;
+  --box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
   font-weight: bold;
-  text-transform: uppercase;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+  margin-top: 10px;
 }
 
-/* Botón outline */
+/* Botón "Ver Perfil" en estilo outline azul */
 ion-button[fill="outline"] {
-  box-shadow: none;
+  --border-color: #3b82f6;
+  --color: #3b82f6;
 }
+
+/* Botón "Cerrar Sesión" en rojo */
+ion-button[color="danger"] {
+  --background: #ef4444;
+  --background-activated: #dc2626;
+  --background-hover: #f87171;
+  color: #fff;
+}
+

@@ -1,25 +1,58 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import {
+  IonContent,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonButtons,
+  IonMenuButton,
+  IonList,
+  IonListHeader,
+  IonItem,
+  IonThumbnail,
+  IonLabel
+} from '@ionic/angular/standalone';
+
 import { Product, ProductsService } from '../services/products.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.page.html',
   styleUrls: ['./products-list.page.scss'],
-  standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  standalone: true, // 🚀 standalone obligatorio
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonContent,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonButtons,
+    IonMenuButton,
+    IonList,
+    IonListHeader,
+    IonItem,
+    IonThumbnail,
+    IonLabel
+  ]
 })
-export class ProductListPage implements OnInit {
-
+export class ProductsListPage implements OnInit {
   products: Product[] = [];
 
-  productsService = inject(ProductsService);
+  constructor(
+    private productsService: ProductsService,
+    private navCtrl: NavController
+  ) {}
 
-  async ngOnInit() {
-    const response = await this.productsService.getAll();
-    this.products = response.results;
+  ngOnInit() {
+    this.products = this.productsService.getProducts();
   }
 
+  openProduct(productId: number) {
+    this.navCtrl.navigateForward(`/product-detail/${productId}`);
+  }
 }
+
